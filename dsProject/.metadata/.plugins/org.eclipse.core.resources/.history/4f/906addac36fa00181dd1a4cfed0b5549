@@ -1,0 +1,10 @@
+package ie.gmit.ds.model;
+
+import java.io.Serializable;
+
+public class Car implements Serializable{
+	private String id;
+	private String model;
+	private String make;
+
+}

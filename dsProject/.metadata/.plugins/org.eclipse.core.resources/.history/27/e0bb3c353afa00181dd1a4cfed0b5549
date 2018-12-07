@@ -1,0 +1,17 @@
+package ie.gmit.ds.rmi;
+
+import java.rmi.RemoteException;
+
+import ie.gmit.ds.model.Booking;
+import ie.gmit.ds.model.Car;
+import ie.gmit.ds.model.Customer;
+
+public class BookigServiceImpl implements BookingService {
+
+	@Override
+	public void createBooking(Booking booking, Car car, Customer customer) throws RemoteException {
+		// TODO Auto-generated method stub
+
+	}
+
+}

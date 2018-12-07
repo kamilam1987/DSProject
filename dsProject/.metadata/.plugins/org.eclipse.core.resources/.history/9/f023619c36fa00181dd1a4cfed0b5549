@@ -1,0 +1,8 @@
+package ie.gmit.ds.model;
+
+public class Car {
+	private String id;
+	private String model;
+	private String make;
+
+}

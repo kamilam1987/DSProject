@@ -1,0 +1,8 @@
+package ie.gmit.ds.model;
+
+public class Customer {
+	private String id;
+	private String firstname;
+	private String lastname;
+
+}

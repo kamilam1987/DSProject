@@ -1,0 +1,66 @@
+package ie.gmit.ds.rmi;
+
+import java.rmi.RemoteException;
+import java.sql.*;
+import java.util.*;
+import ie.gmit.ds.model.Booking;
+import ie.gmit.ds.model.Car;
+import ie.gmit.ds.model.Customer;
+
+public class BookigServiceImpl implements BookingService {
+
+	// Database connection
+	private Connection connection;
+
+	public BookigServiceImpl() {
+		connect();
+	}
+
+	private void connect() {
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/geography", "root", "");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	@Override
+	public void createBooking(Booking booking) throws RemoteException {
+		// TODO Auto-generated method stub
+		
+		final PreparedStatement stmt = connection.prepareStatement("INSERT INTO Booking VALUES (?,?,?)");
+		stmt.setString(1, car.getId());
+		stmt.setString(2, car.);
+		stmt.setString(3, country.getCountryDetails());
+		stmt.executeUpdate();
+	
+		return "list_countries"; // navigate to countries page on success
+
+	}
+
+	@Override
+	public int createCustomer(Customer customer) throws RemoteException {
+		PreparedStatement stmt;
+		try {
+			stmt = connection.prepareStatement("INSERT INTO Customer VALUES (?,?)");
+
+			stmt.setString(1, customer.getFirstname());
+			stmt.setString(2, customer.getLastname());
+			stmt.executeUpdate();
+
+			final Statement myStmt = connection.createStatement();
+			final ResultSet rs = myStmt.executeQuery("SELECT * FROM Customer WHERE id=?");
+			while (rs.next()) {
+				return rs.getInt("id");
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return -1;
+
+	}
+
+}
