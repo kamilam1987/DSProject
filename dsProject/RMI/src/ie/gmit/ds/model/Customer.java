@@ -3,8 +3,11 @@ package ie.gmit.ds.model;
 import java.io.Serializable;
 
 public class Customer implements Serializable{
-	private int
-	id;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private int id;
 	private String firstname;
 	private String lastname;
 	

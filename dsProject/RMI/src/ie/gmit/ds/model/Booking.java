@@ -3,24 +3,29 @@ package ie.gmit.ds.model;
 import java.io.Serializable;
 
 public class Booking  implements Serializable{
-	private String carid;
-	private int customerid;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private Car car;
+	private Customer customer;
 	private String bookingfrom;
 	private String bookingto;
 	private String time;
 	private int id;
 	
-	public String getCarid() {
-		return carid;
+	
+	public Car getCar() {
+		return car;
 	}
-	public void setCarid(String carid) {
-		this.carid = carid;
+	public void setCar(Car car) {
+		this.car = car;
 	}
-	public int getCustomerid() {
-		return customerid;
+	public Customer getCustomer() {
+		return customer;
 	}
-	public void setCustomerid(int customerid) {
-		this.customerid = customerid;
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
 	}
 	public String getBookingfrom() {
 		return bookingfrom;
