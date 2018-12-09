@@ -15,6 +15,7 @@ public interface BookingService extends Remote{
 	public List<Booking> getBookings() throws RemoteException;
 	public int updateBooking(Booking booking) throws RemoteException;
 	public CarList getCars() throws RemoteException;
+	public int deleteBooking(Booking booking) throws RemoteException;
 	
 	
 }

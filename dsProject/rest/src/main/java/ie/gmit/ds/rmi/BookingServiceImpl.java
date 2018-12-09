@@ -46,5 +46,10 @@ public class BookingServiceImpl implements BookingService {
 	public CarList getCars() throws RemoteException {
 		return bs.getCars();
 	}
+	@Override
+	public int deleteBooking(Booking booking) throws RemoteException {
+		return bs.deleteBooking(booking);
+	}
+
 
 }

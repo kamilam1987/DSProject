@@ -214,4 +214,25 @@ public class BookigServiceImpl extends UnicastRemoteObject implements BookingSer
 		return carlist;
 	}
 
+	@Override
+	public int deleteBooking(Booking booking) throws RemoteException {
+		PreparedStatement stmt;
+		try {
+
+			stmt = connection.prepareStatement(
+					"DELETE FROM Booking where id=? limit 1");
+		
+			stmt.setInt(1, booking.getId());
+			return stmt.executeUpdate();
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return 0;
+	}
+
+	
+	
 }

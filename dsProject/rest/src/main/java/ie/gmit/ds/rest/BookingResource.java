@@ -74,4 +74,22 @@ public class BookingResource {
 		}
 		return b;
 	}
+	
+	@DELETE
+	@Produces(MediaType.APPLICATION_XML)
+	@Consumes(MediaType.APPLICATION_XML)
+	@Path("/{id}")
+	public Response deleteBooking( @PathParam("id")Booking b) {
+		int id = -1;
+		try {
+			id = bs.deleteBooking(b);
+		} catch (RemoteException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return Response.status(200).entity(Integer.toString(id)).build();
+	}
+	
+	
+	
 }
