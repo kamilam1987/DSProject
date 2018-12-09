@@ -26,4 +26,10 @@ CREATE TABLE IF NOT EXISTS Booking (
 
 );
 
+INSERT INTO Car VALUES ('182-D-1234','Any','Model');
+INSERT INTO Car VALUES ('182-D-1235','Any1','Model1');
+INSERT INTO Car VALUES ('182-D-1236','Any2','Model2');
+INSERT INTO Car VALUES ('182-D-1237','Any3','Model3');
+INSERT INTO Car VALUES ('182-D-1238','Any4','Model4');
+
 
