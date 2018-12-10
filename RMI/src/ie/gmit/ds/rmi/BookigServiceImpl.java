@@ -70,6 +70,10 @@ public class BookigServiceImpl extends UnicastRemoteObject implements BookingSer
 
 	}
 
+	/**
+	 * This method creates a a new customer.
+	 * The following SQL statement inserts a new record in the "Customer" tables
+	 */
 	@Override
 	public int createCustomer(Customer customer) throws RemoteException {
 		PreparedStatement stmt;
@@ -96,6 +100,10 @@ public class BookigServiceImpl extends UnicastRemoteObject implements BookingSer
 
 	}
 
+	/**
+	 * This method gets a booking list.
+	 * 
+	 */
 	@Override
 	public List<Booking> getBookings() throws RemoteException {
 		try {
@@ -133,6 +141,10 @@ public class BookigServiceImpl extends UnicastRemoteObject implements BookingSer
 		return null;
 	}
 
+	/**
+	 * This method updates a a Booking table.
+	 * The following SQL updates time car id, customer id and booking date
+	 */
 	@Override
 	public int updateBooking(Booking booking) throws RemoteException {
 		PreparedStatement stmt;
@@ -195,6 +207,10 @@ public class BookigServiceImpl extends UnicastRemoteObject implements BookingSer
 		return null;
 	}
 
+	/**
+	 * This method gets a car list.
+	 * 
+	 */
 	@Override
 	public CarList getCars() throws RemoteException {
 	    CarList carlist= new CarList();
@@ -221,6 +237,10 @@ public class BookigServiceImpl extends UnicastRemoteObject implements BookingSer
 		return carlist;
 	}
 
+	/**
+	 * This method delete from Booking table.
+	 * The following SQL deletes from booking table by id
+	 */
 	@Override
 	public int deleteBooking(int id) throws RemoteException {
 		PreparedStatement stmt;

@@ -14,7 +14,14 @@ import java.io.Serializable;
 
 public class Booking implements Serializable {
 	
-	//Declare variables
+	/**
+	 * Declare Variables 
+	 * car - car available for booking
+	 * customer - customer that makes booking 
+	 * bookingfrom - starts date for booking 
+	 * boookingto - end date for boking
+	 * id - booking id
+	 */
 	private static final long serialVersionUID = 1L;
 	private Car car;
 	private Customer customer;

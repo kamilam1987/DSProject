@@ -8,7 +8,6 @@ import ie.gmit.ds.model.*;
 
 public interface BookingService extends Remote{
 	
-	
 	public int createBooking(Booking booking) throws RemoteException;
 	public Booking getBooking(int id) throws RemoteException;
 	public int createCustomer(Customer customer) throws RemoteException;
@@ -16,6 +15,5 @@ public interface BookingService extends Remote{
 	public int updateBooking(Booking booking) throws RemoteException;
 	public int deleteBooking(int id) throws RemoteException;
 	public CarList getCars() throws RemoteException;
-	
 	
 }

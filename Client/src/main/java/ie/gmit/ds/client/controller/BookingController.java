@@ -1,9 +1,6 @@
 package ie.gmit.ds.client.controller;
 
-import java.util.List;
-
 import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,32 +11,47 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import ie.gmit.ds.client.model.Booking;
 import ie.gmit.ds.client.services.BookingService;
 
+/**
+ * @author Kamila
+ *
+ */
 @Controller
 public class BookingController {
 	@Autowired
 	BookingService bookingService;
 
-	@RequestMapping(value = "/viewbooking", method=RequestMethod.GET)
+	/**
+	 * A GET method in this case is used to retrieve booking data from the server
+	 * Displays booking with id=2
+	 */
+	@RequestMapping(value = "/viewbooking", method = RequestMethod.GET)
 	public String getBookings(Model model) {
 		System.out.println("HERE");
 		Booking b = bookingService.find("2");
 		model.addAttribute("booking", b);
-			return "viewbooking";
+		return "viewbooking";
 	}
-	
-	
-	@RequestMapping(value = "/addbooking", method=RequestMethod.GET)
+
+	/**
+	 * A GET method in this case is used to retrieve a new added booking data from
+	 * the server
+	 * 
+	 */
+	@RequestMapping(value = "/addbooking", method = RequestMethod.GET)
 	public String add(Model model) {
 		System.out.println("HERE");
 		Booking b = bookingService.find("2");
 		model.addAttribute("booking", b);
-			return "addbooking";
+		return "addbooking";
 	}
-	
-	
+
+	/**
+	 * A POST method is used to create a new booking, update or delete data on the
+	 * server side
+	 * 
+	 */
 	@RequestMapping(value = "/addbooking", method = RequestMethod.POST)
-	public String add(@Valid @ModelAttribute("booking") Booking b,
-			BindingResult result, Model model) {
+	public String add(@Valid @ModelAttribute("booking") Booking b, BindingResult result, Model model) {
 		if (result.hasErrors()) {
 			return "addbooking";
 		} else {
@@ -47,5 +59,5 @@ public class BookingController {
 			return "redirect:viewbooking";
 		}
 	}
-	
-}	
+
+}

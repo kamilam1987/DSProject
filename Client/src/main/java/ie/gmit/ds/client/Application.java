@@ -1,16 +1,12 @@
 package ie.gmit.ds.client;
 
-/*
-com.ships -> don't change
-com.ships.model -> models don't change
-com.ships.controllers ->  controllers - request mappings
-com.ships.repositories -> database
-com.ships.security -> 
-com.ships.services -> pass information from one to another
-*/
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+/**
+ * @author Kamila The SpringApplication class provides a convenient way to
+ *         bootstrap a Spring application that is started from a main() method.
+ */
 
 @SpringBootApplication
 public class Application {

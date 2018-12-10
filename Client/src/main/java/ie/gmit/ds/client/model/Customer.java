@@ -2,15 +2,29 @@ package ie.gmit.ds.client.model;
 
 import java.io.Serializable;
 
+/**
+ * @author Kamila
+ *
+ */
+
+/**
+ * Class Customer implements the Serializable interface. Use of the constant
+ * serialVersionUID. This class field is used to check during unmarshalling
+ * (deserialization)
+ */
 public class Customer implements Serializable{
 	/**
-	 * 
+	 * Declare variables
 	 */
 	private static final long serialVersionUID = 1L;
 	private int id;
 	private String firstname;
 	private String lastname;
 	
+	/**
+	 * Generate setters
+	 * and getters for customer
+	 */
 	public int getId() {
 		return id;
 	}
