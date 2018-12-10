@@ -40,4 +40,13 @@ Remote Object into the RMI registry using the name “databaseservice”.</br>
 - Tomcat Server 7.0</br>
 - MySQL Server 5.7</br>
 - Maven</br>
+## Instructions how to run the project
+- Step 1: Clone the project from git
+- Step 2: Navigate to the folder with cloned project.
+- Step 3: Start Eclipse EE edition
+- Step 4: rest project Run as-> Run on Server
+- Step 5: RMI project ->Run as Java Application->Pick ServiceSetup Class
+- Step 6: Client project ->Run as Spring Application
+- Step 7: Open browser: http://localhost:81/
+
 
