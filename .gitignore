@@ -1,3 +1,7 @@
+.metadata
+RemoteSystemsTempFiles
+*/target
+
 */.metadata
 */bin/
 */tmp/
@@ -56,3 +60,4 @@ local.properties
 
 */.classpath
 */.project
+/.metadata/
