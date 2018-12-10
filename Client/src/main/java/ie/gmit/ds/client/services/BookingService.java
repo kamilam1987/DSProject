@@ -17,6 +17,7 @@ public class BookingService {
 	
 	String resourceBaseURL = "http://localhost:8080/rest/webapi/booking/";
 	
+	//cj
 	public Booking find(String id){
 		//Get new template
         RestTemplate restTemplate = new RestTemplate();

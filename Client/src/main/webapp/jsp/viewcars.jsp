@@ -8,33 +8,21 @@
 <head>
 <link href="/css/style.css" rel="stylesheet"></link>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>List of Shipping Companies</title>
+<title>Cars</title>
 </head>
 <body>
-	<h1>Shipping Companies</h1>
+	<h1>Cars</h1>
 	<table>
 		<tr>
-			<th>Name</th>
-			<th>Home Port</th>
-			<th>Balance</th>
-			<th>Ships</th>
+			<th>Id</th>
+			<th>Model</th>
+			<th>Make</th>
 		</tr>
-		<c:forEach items="${shippingCompany}" var="shippingCompanies">
 			<tr>
-				<td>${shippingCompanies.name}</td>
-				<td>${shippingCompanies.homePort}</td>
-				<td>${shippingCompanies.balance}</td>
-				<td>
-					<ul>
-						<c:forEach items="${shippingCompanies.ships}" var="ship">
-							<li>${ship.name}&nbsp${ship.metres}&nbsp${ship.cost}</li>
-
-						</c:forEach>
-					</ul>
-				</td>
+				<td>${car.id}</td>
+				<td>${car.model}</td>
+				<td>${car.make} </td>
 			</tr>
-		</c:forEach>
 	</table>
-	<a href="/">Home</a>
 </body>
 </html>
