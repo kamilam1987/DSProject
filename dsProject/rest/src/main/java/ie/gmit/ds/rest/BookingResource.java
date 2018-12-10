@@ -79,10 +79,9 @@ public class BookingResource {
 	@Produces(MediaType.APPLICATION_XML)
 	@Consumes(MediaType.APPLICATION_XML)
 	@Path("/{id}")
-	public Response deleteBooking( @PathParam("id")Booking b) {
-		int id = -1;
+	public Response deleteBooking( @PathParam("id") int id) {		
 		try {
-			id = bs.deleteBooking(b);
+			id = bs.deleteBooking(id);
 		} catch (RemoteException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
